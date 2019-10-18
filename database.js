@@ -21,10 +21,13 @@ index.all=()=>{
 }
 index.insert=(Name,Salary)=>{
   
+    console.log("this is sworking");
     
     return new Promise((resolve,reject)=>{
-        mysqlconnection.query(`insert  into employee (Name,Salary) values ?, `,[Name.Name,Salary.Salary],(err,rows,field)=>{
+        mysqlconnection.query(`insert  into employee (Name,Salary) values (?,?) `,[Name,Salary],(err,rows,field)=>{
             if(!err){
+                console.log("values");
+                
                return resolve(rows);
             }
             else{
