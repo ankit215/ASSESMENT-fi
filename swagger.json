@@ -1,0 +1,86 @@
+{
+    "swagger": "2.0",
+    "info": {
+    "version": "1.0.0",
+    "description": "sample api login logout",
+    "title": "sample api"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+    "http"
+    ],
+    "paths": {
+    "/employees/{id}": {
+    "get": {
+    "description": "insert a user in the database",
+    "parameters":[
+    {
+    "type":"string",
+    "description":"Id",
+    "name":"id",
+    "in":"path",
+    "example":"3"
+    }
+    ],
+    "responses": {
+    "200": {
+    "description" : "response template render"
+    }
+    }
+    }
+    },
+    "/employees":{
+    "post": {
+    "description": "update a user in the database",
+    "parameters": [
+    {
+    "type": "string",
+    "description": "Details",
+    "name": "Details",
+    "in": "body"
+    }
+    ],
+    "responses": {
+    "200": {
+    "description" : "successfully signed up."
+    }
+    }
+    },
+    "put":{
+    "description":"Creates a user in the database",
+    "parameters":[
+    {
+    "type":"string",
+    "description":"details",
+    "name":"details",
+    "in":"body"
+    }
+    ],
+    "responses":{
+    "200":{
+    "description":"successfully signed up."
+    }
+    }
+    },
+    "delete":{
+    "description":"delete a user in the database",
+    "parameters":[
+    {
+    "type":"string",
+    "description":"Id",
+    "name":"id",
+    "in":"body",
+    "example":"4"
+    }
+    ],
+    "responses":{
+    "200":{
+    "description":"Username of user"
+    }
+    }
+    }
+    
+    }
+    }
+    }
